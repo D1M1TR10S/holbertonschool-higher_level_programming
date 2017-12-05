@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * check_cycle - Checks linked list to see if it's a cycle
+ * @list: A pointer to the linked list being checked
+ * Return: 0 or 1
  */
 int check_cycle(listint_t *list)
 {
