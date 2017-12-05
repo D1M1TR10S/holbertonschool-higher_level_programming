@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * check_cycle - Checks linked list to see if it's a cycle
  * @list: A pointer to the linked list being checked
@@ -13,11 +12,10 @@ int check_cycle(listint_t *list)
 	listint_t *check1 = list;
 	listint_t *check2 = list;
 
-	while (check2 != NULL && check1 != NULL)
+	while (check2 != NULL && check2->next != NULL && check2->next->next != NULL)
 	{
 		check1 = check1->next;
-		check2 = check2->next;
-		check2 = check2->next;
+		check2 = check2->next->next;
 		if(check1 == check2)
 			return (1);
 	}
