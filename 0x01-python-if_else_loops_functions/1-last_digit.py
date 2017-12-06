@@ -9,5 +9,5 @@ if digit > 5:
     print("{} and is greater than 5".format(digit))
 elif digit == 0:
     print("{} and is 0".format(digit))
-elif digit < 6 and digit != 0:
+elif digit < 6 and number != 0:
     print("{} and is less than 6 and not 0".format(digit))
