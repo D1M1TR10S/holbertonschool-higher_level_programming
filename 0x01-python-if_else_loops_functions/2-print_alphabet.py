@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 for i in range(ord('a'), ord('z')+1):
-    print (chr(i), end="")
-print ()
+    if i < ord('z'):
+        print (chr(i), end="")
+    else:
+        print (chr(i))
