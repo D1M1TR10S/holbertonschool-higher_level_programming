@@ -3,9 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 print('Last digit of {:d} is'.format(number), end=" ")
 if number < 0:
-    number = number * -1
-    digit = number % 10 * -1
-    number = number * -1
+    digit = (-1 * number) % 10 * -1
 else:
     digit = number % 10
 if digit > 5:
