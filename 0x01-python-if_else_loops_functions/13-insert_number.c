@@ -19,14 +19,15 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		if ((*head) == NULL)
 		{
-			(*head)->next = newnode;
+			(*head) = newnode;
 			newnode->next = NULL;
 			return (newnode);
 		}
 		if (number < (*head)->n && (*head)->next == NULL)
 		{
-			temp->next = (*head);
-			(*head) = temp;
+			newnode->next = (*head);
+			(*head) = newnode;
+			return (newnode);
 		}
 		if (temp->next == NULL)
 		{
