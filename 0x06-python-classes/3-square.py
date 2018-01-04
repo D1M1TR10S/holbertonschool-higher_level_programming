@@ -13,7 +13,7 @@ class Square:
         else:
             self.__size = size
         """Setting size attribute."""
-        
+
     def area(self):
         """Defining object called area."""
         return (self.__size ** 2)
