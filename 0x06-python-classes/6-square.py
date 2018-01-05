@@ -4,8 +4,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Defining attribute called size."""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
         """Setting size attribute."""
 
     @property
@@ -34,12 +34,16 @@ class Square:
     @position.setter
     def position(self, position):
         """Setting position value."""
-        if type(position) != tuple:
+        if not isinstance(position, tuple):
+            print("position must be a tuple of 2 positive integers", end="")
+            raise ValueError
+        elif len(position) != 2:
             print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
-        elif type(position[0]) != int or type(position[1]) != int:
+        elif not isinstance(position[0], int) \
+                or not isinstance(position[1], int):
             print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
+            raise ValueError
         elif position[0] < 0 or position[1] < 0:
             print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
