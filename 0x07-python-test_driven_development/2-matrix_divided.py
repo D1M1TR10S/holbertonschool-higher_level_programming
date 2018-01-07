@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
 This is the add_integer module.
-It supplies one function, add_integer. For example,
-
+It supplies one function, matrix_divided
+It divides matrix by div
 """
 def matrix_divided(matrix, div):
     """
-    Return the sum of variables a and b
+    Returns a new list of the divided matrix
     """
     if type(div) != int and type(div) != float:
         raise TypeError('div must be a number')
