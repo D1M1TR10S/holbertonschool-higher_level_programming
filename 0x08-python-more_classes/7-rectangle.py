@@ -7,9 +7,13 @@ class Rectangle:
     """
     Creating a class called Rectangle
     """
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Defining attributes called width and height."""
+        type(self).number_of_instances += 1
+        """Counting number of instances."""
         self.__width = width
         """Setting width attribute."""
         self.__height = height
@@ -21,7 +25,7 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             for y in range(self.height):
                 for x in range(self.width):
-                    string += '#'
+                    string += str(self.print_symbol)
                 if y < (self.height - 1):
                     string += '\n'
         return (string)
@@ -29,6 +33,11 @@ class Rectangle:
     def __repr__(self):
         """Return a string representation of Rectangle."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Detect when an instance of Rectangle is deleted."""
+        print('Bye rectangle...')
+        type(self).number_of_instances -= 1
 
     @property
     def width(self):

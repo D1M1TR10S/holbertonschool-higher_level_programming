@@ -30,6 +30,10 @@ class Rectangle:
         """Return a string representation of Rectangle."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
+    def __del__(self):
+        """Detect when an instance of Rectangle is deleted."""
+        print('Bye rectangle...')
+
     @property
     def width(self):
         """Getter for width."""
