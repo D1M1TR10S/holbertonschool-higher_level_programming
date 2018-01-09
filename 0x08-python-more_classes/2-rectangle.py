@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""
-This is the Rectangle class
+"""This is the Rectangle class
 It provides several modules for the Rectangle
 """
+
+
 class Rectangle:
     """
     Creating a class called Rectangle
