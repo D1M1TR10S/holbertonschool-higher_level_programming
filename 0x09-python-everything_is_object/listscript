@@ -1,0 +1,7 @@
+#!/bin/bash
+for filename in ~/holbertonschool-higher_level_programming/0x09-python-everything_is_object/*-answer.txt
+do
+	echo -n `basename "$filename"`
+	echo -n -e "\t\t"
+	cat $filename
+done;
