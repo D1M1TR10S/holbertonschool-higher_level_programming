@@ -1,0 +1,53 @@
+The ``7-base_geometry.py`` module
+======================
+
+Using ``BaseGeometry`` class
+-------------------
+
+First import the ``BaseGeometry`` class:
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base_g = BaseGeometry()
+
+Sending an int into value:
+>>> base_g.integer_validator("Age", 23)
+
+Sending a value of type str:
+>>> base_g.integer_validator("James", "Brown")
+Traceback (most recent call last):
+	...
+TypeError: James must be an integer
+
+Sending a list in for value:
+>>> base_g.integer_validator("List", [1, 2, 3])
+Traceback (most recent call last):
+	...
+TypeError: List must be an integer
+
+Sending a float in for value:
+>>> base_g.integer_validator("height", 8.5)
+Traceback (most recent call last):
+        ...
+TypeError: height must be an integer
+	
+Sending a tuple in for value:
+>>> base_g.integer_validator("Tuple", (3, 5))
+Traceback (most recent call last):
+	...
+TypeError: Tuple must be an integer
+
+Sending a negative number in for value:
+>>> base_g.integer_validator("Age", -8)
+Traceback (most recent call last):
+	...
+ValueError: Age must be greater than 0
+
+Passing an empty string into <name>:
+>>> base_g.integer_validator("", 2)
+
+Calling function with no value parameter:
+>>> base_g.integer_validator("Age", )
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
