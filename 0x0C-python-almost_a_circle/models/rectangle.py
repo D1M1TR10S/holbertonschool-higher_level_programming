@@ -17,6 +17,12 @@ class Rectangle(Base):
         self.x = x
         super().__init__(id)
 
+    def __str__(self):
+        """Printing parameters to stdout
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format\
+            (self.id, self.x, self.y, self.width, self.height))
+
     @property
     def width(self):
         """Getter for width."""
@@ -76,3 +82,16 @@ class Rectangle(Base):
             raise ValueError('x must be >= 0')
         else:
             self.__x = x
+
+    def area(self):
+        """Defining the area method of Rectangle
+        """
+        return (self.width * self.height)
+
+    def display(self):
+        """Prints the square to stdout in # symbols
+        """
+        for y in range(self.height):
+            for x in range(self.width):
+                print("#", end="")
+            print()
