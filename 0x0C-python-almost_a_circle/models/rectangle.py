@@ -20,8 +20,8 @@ class Rectangle(Base):
     def __str__(self):
         """Printing parameters to stdout
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format\
-            (self.id, self.x, self.y, self.width, self.height))
+        return("[Rectangle] ({}) {}/{} - {}/{}".format
+              (self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """Assigns arguments to class attributes
@@ -34,7 +34,6 @@ class Rectangle(Base):
         if len(args) == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-            
 
     @property
     def width(self):
