@@ -20,12 +20,21 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returning a json string representation
+        """Returning a json string representation from a list
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returning a list from a json string representation
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
