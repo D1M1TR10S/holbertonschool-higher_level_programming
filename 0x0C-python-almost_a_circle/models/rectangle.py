@@ -111,3 +111,14 @@ class Rectangle(Base):
             for x in range(self.width):
                 print("#", end="")
             print()
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of Rectangle
+        """
+        d = {}
+        attributes = ['x', 'y', 'id', 'height', 'width']
+        for key in attributes:
+            value = getattr(self, key)
+            d.update({key:value})
+        return d
