@@ -50,3 +50,24 @@ class Base:
         j_string = Base.to_json_string(dict_list)
         with open(j_file, mode='w', encoding='utf-8') as a_file:
             a_file.write(j_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set
+        """
+        temp = cls(1, 1)
+        temp.update(**dictionary)
+        return temp
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances from a file
+        """
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                j_string = f.read()
+            list_dict = cls.from_json_string(j_string)
+        except IOError:
+            return []
+        return [cls.create(**obj) for obj in list_dict]

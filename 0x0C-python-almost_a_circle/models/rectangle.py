@@ -120,5 +120,5 @@ class Rectangle(Base):
         attributes = ['x', 'y', 'id', 'height', 'width']
         for key in attributes:
             value = getattr(self, key)
-            d.update({key:value})
+            d.update({key: value})
         return d
