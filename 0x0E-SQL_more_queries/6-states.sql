@@ -1,4 +1,4 @@
--- Creates 'hbtn_0d_usa' database and 'unique_id' table in MySQL server
+-- Creates 'hbtn_0d_usa' database and a 'states' table within
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
