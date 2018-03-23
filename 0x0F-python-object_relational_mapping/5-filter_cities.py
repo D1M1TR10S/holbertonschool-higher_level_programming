@@ -16,6 +16,6 @@ if __name__ == "__main__":
                 WHERE states.name = %s", (argv[4],))
     query = cur.fetchall()
     city_list = [i[0] for i in query]
-    print (', '.join(city_list))
+    print(', '.join(city_list))
     cur.close()
     db.close()
