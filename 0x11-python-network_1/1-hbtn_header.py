@@ -9,7 +9,8 @@ import sys
 url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
     content = str(response.info())
-    for line in content.split("\n"):
+    lines = content.split("\n")
+    for line in lines:
         if "X-Request-Id" in line:
             request_id = line.split("X-Request-Id: ", 1)[1]
     print(request_id)
