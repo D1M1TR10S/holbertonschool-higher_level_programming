@@ -5,12 +5,10 @@
 import urllib.request
 import sys
 
-
-url = sys.argv[1]
-with urllib.request.urlopen(url) as response:
-    content = str(response.info())
-    lines = content.split("\n")
-    for line in lines:
-        if "X-Request-Id" in line:
-            request_id = line.split(" ")[1]
-    print(request_id)
+try:
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        content = response.info()
+        request_id = content['X-Request-Id']
+        print(request_id)
+except URLError as e:
+    pass
