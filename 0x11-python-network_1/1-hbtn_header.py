@@ -5,6 +5,7 @@
 import urllib.request
 import sys
 
+
 try:
     with urllib.request.urlopen(sys.argv[1]) as response:
         content = response.info()
