@@ -12,5 +12,5 @@ with urllib.request.urlopen(url) as response:
     lines = content.split("\n")
     for line in lines:
         if "X-Request-Id" in line:
-            request_id = line.split("X-Request-Id: ", 1)[1]
+            request_id = line.split(" ")[1]
     print(request_id)
