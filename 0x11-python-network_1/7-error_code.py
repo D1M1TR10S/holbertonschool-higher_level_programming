@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-   Fetch info about a URL and handle for errors 
+   Fetch info about a URL and handle for errors
 '''
 import requests
 import sys
