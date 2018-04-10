@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    Fetch info about a URL using the Requests package and display Request-Id
+    Post info to a URL and print content returned
 '''
 import requests
 import sys
