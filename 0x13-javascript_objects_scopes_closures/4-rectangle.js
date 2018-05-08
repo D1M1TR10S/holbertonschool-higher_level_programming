@@ -1,6 +1,7 @@
 #!/usr/bin/node
 // Create class Rectangle
-// that prints a rectangle
+// with methods that alter
+// width and height
 
 module.exports = class Rectangle {
   constructor (w, h) {
@@ -13,5 +14,14 @@ module.exports = class Rectangle {
     for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
     };
+  }
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+  rotate () {
+    let temp = this.width;
+    this.width = this.height;
+    this.height = temp;
   }
 };
