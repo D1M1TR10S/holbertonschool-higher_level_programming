@@ -6,4 +6,4 @@ module.exports = class Square extends Square1 {
   charPrint (c) {
     this.print(c);
   }
-}
+};
